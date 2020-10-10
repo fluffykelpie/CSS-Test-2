@@ -2,4 +2,35 @@
 @import "animations";
 @import "variables";
 
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.container {
+    background-color: antiquewhite;
+    height: 50%;
+    width: 50%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template: repeat(5, auto) /  repeat(4, minmax(75px, 1fr));
+}
+
+.box {
+    background-color: rgb(116, 182, 245);
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    background-color: rgb(240, 113, 177);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
