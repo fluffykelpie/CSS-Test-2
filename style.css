@@ -16,6 +16,33 @@ body {
   height: 100%;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes hover {
+  25% {
+    transform: translate(-37.5px, 37.5px);
+  }
+  50% {
+    transform: translate(0px, 75px);
+  }
+  75% {
+    transform: translate(37.5px, 37.5px);
+  }
+}
+@keyframes flip {
+  50% {
+    transform: rotateY(180deg);
+  }
+}
 main {
   height: 100%;
   display: flex;
@@ -24,29 +51,31 @@ main {
 }
 
 .container {
-  background-color: antiquewhite;
+  background: linear-gradient(180deg, #fde98e 30%, white);
   height: 50%;
   width: 50%;
+  padding: 20px;
   display: grid;
-  grid-gap: 3px;
-  grid-template: repeat(5, auto)/repeat(4, minmax(75px, 1fr));
+  grid-gap: 15px;
+  grid-template: auto/repeat(4, minmax(75px, 1fr));
 }
 
 .box {
-  background-color: #74b6f5;
-  margin: 20px;
+  background-color: #399af5;
   height: 100px;
   width: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  animation: pulse 3s ease-in-out forwards;
 }
 
 .circle {
-  background-color: #f071b1;
+  background-color: #df99bc;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
+  position: relative;
+  animation: hover 3s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=style.css.map */
